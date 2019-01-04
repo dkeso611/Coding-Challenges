@@ -48,19 +48,21 @@ func compareString(string1: String, string2: String) {
         }
     }
     
+
+    if indexB! > indexA! && index2B! < index2A! || indexB! < indexA! && index2B! > index2A! {
+        print("crossed")
+    }
+    
     let abDistance = indexB! - indexA!
     let ab2Distance = index2B! - index2A!
     let difference = abs(ab2Distance - abDistance)
     if difference > 1 {
         print("crossed")
     }
-//    print(indexA, indexB)
-//    print(index2A, index2B)
-    
-//    guard let indexA = indexA, indexB = indexB
+
 }
 
 
 
 
-compareString(string1: "acb", string2: "bac")
+compareString(string1: "acb", string2: "cba")

@@ -13,6 +13,7 @@ func firstUniqueCharacter(string: String) -> Int {
     
     for (i, char) in string.enumerated() {
         if characterDict[char] == false {
+            print("first unique character:", char)
             return i
         }
     }
@@ -21,5 +22,5 @@ func firstUniqueCharacter(string: String) -> Int {
         
 }
 
-var string = "leetcodel"
+var string = "aleetcodel"
 firstUniqueCharacter(string: string)
