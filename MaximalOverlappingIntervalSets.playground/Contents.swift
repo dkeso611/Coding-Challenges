@@ -12,16 +12,15 @@ func maxOverlappingSet( array1: [Int], array2:  [Int]) {
  
     
     while i < arrival.count && j < exit.count {
-        if arrival[i] < exit[j] {
+        if arrival[i] <= exit[j] {
             guests += 1
             
             if guests > maxGuests {
                 maxGuests = guests
                 time = arrival[i]
-                exitTime = exit[i]
                 
-                print("max:", maxGuests)
-                print("time:", time)
+//                print("max:", maxGuests)
+//                print("time:", time)
             }
             
             i += 1
@@ -29,6 +28,8 @@ func maxOverlappingSet( array1: [Int], array2:  [Int]) {
         } else if arrival[i] > exit[j] {
             if guests > 0 {
                 guests -= 1
+                exitTime = exit[j]
+//                print("exit time:", exitTime)
             }
             
             j += 1
@@ -43,7 +44,6 @@ func maxOverlappingSet( array1: [Int], array2:  [Int]) {
     }
     
     print("time:", time, "max:", maxGuests)
-    print("exit time:", exitTime)
 }
 
 
