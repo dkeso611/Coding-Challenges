@@ -1,5 +1,6 @@
 import UIKit
 
+//While loop
 func consecutiveIncreasingIntsWhile(array: [Int]) {
     var maxStart = 0
     var maxEnd = 0
@@ -35,6 +36,7 @@ func consecutiveIncreasingIntsWhile(array: [Int]) {
     print("longest subarray:", longestSubarray)
 }
 
+//For loop
 func consectutiveIncreasingIntsFor(array: [Int]) {
     var start = 0
     var end = 0
@@ -60,10 +62,8 @@ func consectutiveIncreasingIntsFor(array: [Int]) {
             start = y + 1
         }
     }
-    
-    for i in maxStart...maxEnd {
-        longestSubarray.append(array[i])
-    }
+
+    longestSubarray.append(contentsOf: array[maxStart...maxEnd])
     
     print("max start:", maxStart, "max end:", maxEnd)
     print("longest subarray:", longestSubarray)
