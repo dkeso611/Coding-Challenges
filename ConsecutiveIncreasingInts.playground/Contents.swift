@@ -50,7 +50,7 @@ func consectutiveIncreasingIntsFor(array: [Int]) {
     for (y, num) in array.enumerated() {
         if y + 1 < array.count  && array[y + 1] > array[y] {
             end += 1 //increase length by 1 if above conditons hold true
-            if end - start + 1 > maxLength { //compare new length to maxLength (end - start + 1, if new length is greater, set new maxlength, start and end
+            if end - start + 1 > maxLength { //compare new length to maxLength (end - start + 1), if new length is greater, set new maxlength, start and end
                 maxLength = end - start + 1
                 maxEnd = end
                 maxStart = start
