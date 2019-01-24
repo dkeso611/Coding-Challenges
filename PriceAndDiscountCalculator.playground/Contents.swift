@@ -9,7 +9,7 @@ struct Item {
 struct List {
     var itemsArray: [Item]
     var discountDict: [String: (Float, Int)] = ["apple": (2.0, 3), "pear":  (3.0, 4)]
-    
+        
     init(itemsArray: [Item]) {
         self.itemsArray = itemsArray
     }
